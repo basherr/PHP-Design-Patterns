@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Factory\Creational\AbstractFactory\JsonFactory;
 use App\Factory\Creational\AbstractFactory\HtmlFactory;
+use App\Factory\Creational\BuilderFactory\MealBuilder;
 
 class CreationalController
 {
@@ -23,5 +24,19 @@ class CreationalController
 		$factory = new JsonFactory();
 		$obj = $factory->createText($p);
 		echo '<b>json string</b>: ' . $obj->render();
+	}
+	/*
+	* Builder
+	*
+	* @param null
+	* @return null
+	*/
+	public function builderFactory()
+	{
+		$builder = new MealBuilder;
+		$meal = $builder->prepareVegitable();
+		$meal->showItems();
+		echo '<pre>meal cost is : ' . $meal->getCost();
+		$meal->forget();
 	}
 }
