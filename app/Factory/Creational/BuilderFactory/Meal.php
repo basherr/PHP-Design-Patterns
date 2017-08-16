@@ -21,8 +21,8 @@ class Meal {
 	*/
 	public function getCost()
 	{
-		return array_sum(array_map(function($val) {
-			return $val->price();
+		return array_sum(array_map(function($item) {
+			return $item->price();
 		}, $this->items));
 	}
 	/*

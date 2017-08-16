@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Factory\Creational\AbstractFactory\JsonFactory;
 use App\Factory\Creational\AbstractFactory\HtmlFactory;
 use App\Factory\Creational\BuilderFactory\MealBuilder;
+use App\Factory\Creational\FactoryMethod\GermanFactory;
 
 class CreationalController
 {
@@ -38,5 +39,19 @@ class CreationalController
 		$meal->showItems();
 		echo '<pre>meal cost is : ' . $meal->getCost();
 		$meal->forget();
+	}
+	/*
+	* simple factory or factory method
+	*
+	* @param null
+	* @return null
+	*/
+	public function factoryMethod()
+	{
+		$factory = new GermanFactory;
+		$vehicle = $factory->create('fast', 'blue');
+
+		echo '<pre> class : ' . get_class($vehicle);
+		echo '<pre> color : ' . $vehicle->getColor();
 	}
 }

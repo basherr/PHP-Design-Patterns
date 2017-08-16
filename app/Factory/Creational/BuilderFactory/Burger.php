@@ -11,11 +11,4 @@ abstract class Burger implements Item {
 	{
 		return new Wrapper;
 	}
-	/*
-	* Price
-	*
-	* @param null
-	* @return null
-	*/
-	public abstract function price() : float;
 }

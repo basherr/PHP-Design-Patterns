@@ -11,11 +11,4 @@ abstract class ColdDrink implements Item {
 	{
 		return new Bottle;
 	}
-	/*
-	* Price
-	*
-	* @param null
-	* @return null
-	*/
-	public abstract function price() : float;
 }

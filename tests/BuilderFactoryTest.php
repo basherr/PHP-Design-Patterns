@@ -54,7 +54,7 @@ class BuilderFactoryTest extends TestCase {
 	/**
 	* @depends testItemCanBeAddedToMeal
 	*/
-	public function testMealCanCreateColdDrinks()
+	public function testMealBuilderCanCreateColdDrinks()
 	{
 		$builder = new MealBuilder;
 		$meal = $builder->prepareVegitable();
