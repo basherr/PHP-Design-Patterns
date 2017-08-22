@@ -6,6 +6,7 @@ use App\Factory\Creational\AbstractFactory\JsonFactory;
 use App\Factory\Creational\AbstractFactory\HtmlFactory;
 use App\Factory\Creational\BuilderFactory\MealBuilder;
 use App\Factory\Creational\FactoryMethod\GermanFactory;
+use App\Factory\Creational\Pool\WorkerPool;
 
 class CreationalController
 {
@@ -53,5 +54,18 @@ class CreationalController
 
 		echo '<pre> class : ' . get_class($vehicle);
 		echo '<pre> color : ' . $vehicle->getColor();
+	}
+	/*
+	* Pool
+	*
+	* @param null
+	* @return null
+	*/
+	public function pool()
+	{
+		$pool = new WorkerPool;
+		$worker = $pool->get();
+
+		echo ' Reverse the following string by worker: do some job = ' . $worker->run('do some job');
 	}
 }
