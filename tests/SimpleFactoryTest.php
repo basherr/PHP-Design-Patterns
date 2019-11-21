@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 use App\Factory\Creational\SimpleFactory\Bicycle;
 use App\Factory\Creational\SimpleFactory\SimpleFactory;
 
-class SimpleFactory extends TestCase {
+class SimpleFactoryTest extends TestCase {
 
     public function testCanCreateBicycleAndDriveToTexas()
     {
