@@ -5,6 +5,7 @@ return [
     ['GET', '/', ['App\Controller\CreationalController', 'abstractFactory'] ],
     ['GET', '/builder', ['App\Controller\CreationalController', 'builderFactory']],
     ['GET', '/factory', ['App\Controller\CreationalController', 'factoryMethod']],
+    ['GET', '/factory2', ['App\Controller\CreationalController', 'factoryMethod2']],
     ['GET', '/pool', ['App\Controller\CreationalController', 'pool']],
     ['GET', '/proto', ['App\Controller\CreationalController', 'prototype']],
     ['GET', '/simple', ['App\Controller\CreationalController', 'simpleFactory']],

@@ -12,6 +12,10 @@ use App\Factory\Creational\Prototype\Marketing;
 use App\Factory\Creational\Prototype\Engineering;
 use App\Factory\Creational\Prototype\Management;
 use App\Factory\Creational\SimpleFactory\SimpleFactory;
+use App\Factory\Creational\FactoryMethodExample2\{
+	FileLoggerFactory,
+	StdLoggerFactory
+};
 
 class CreationalController
 {
@@ -61,6 +65,21 @@ class CreationalController
 		echo '<pre> color : ' . $vehicle->getColor();
 	}
 	/*
+	* simple factory or factory method
+	*
+	* @param null
+	* @return null
+	*/
+	public function factoryMethod2()
+	{
+		$factory = new StdLoggerFactory;
+		$factory->createLogger()->log('Write this message to log');
+
+		$file = __DIR__ . '/factory.txt';
+		(new FileLoggerFactory($file))->createLogger()->log('This text to be written on a file');
+		echo "<br/>". \file_get_contents($file);
+	}
+	/*
 	* Pool
 	*
 	* @param null
@@ -81,49 +100,49 @@ class CreationalController
 	*/
 	public function prototype()
 	{
-				$marketing = new Marketing();
-        $management = new Management();
-        $engineering = new Engineering();
+		$marketing = new Marketing();
+		$management = new Management();
+		$engineering = new Engineering();
 
-        $smith = clone $marketing;
-        $this->setEmployee( $smith, "Tess Smith", 101, "ts101-1234");
-        $this->showEmployee($smith);
+		$smith = clone $marketing;
+		$this->setEmployee( $smith, "Tess Smith", 101, "ts101-1234");
+		$this->showEmployee($smith);
 
-        $jacob = clone $marketing;
-        $this->setEmployee( $jacob,"Jacob Jones", 102,"jj101-2234");
-        $this->showEmployee($jacob);
+		$jacob = clone $marketing;
+		$this->setEmployee( $jacob,"Jacob Jones", 102,"jj101-2234");
+		$this->showEmployee($jacob);
 
-        $ricky = clone $management;
-        $this->setEmployee($ricky,"Ricky Rodriguez", 203,"rr203-5634");
-        $this->showEmployee($ricky);
+		$ricky = clone $management;
+		$this->setEmployee($ricky,"Ricky Rodriguez", 203,"rr203-5634");
+		$this->showEmployee($ricky);
 
-        $livia = clone $engineering;
-        $this->setEmployee($livia,"Olivia Perez", 302,"op301-1278");
-        $this->showEmployee($livia);
+		$livia = clone $engineering;
+		$this->setEmployee($livia,"Olivia Perez", 302,"op301-1278");
+		$this->showEmployee($livia);
 
-        $jhon = clone $engineering;
-        $this->setEmployee($jhon,"John Jackson", 301, "jj302-1454");
-        $this->showEmployee($jhon);
+		$jhon = clone $engineering;
+		$this->setEmployee($jhon,"John Jackson", 301, "jj302-1454");
+		$this->showEmployee($jhon);
 	}
 
-    private function showEmployee(IAcmePrototype $employee)
-    {
-        echo $employee->getName() . "<br/>";
-        echo $employee->getDept() . ": " . $employee::UNIT . "<br/>";
-        echo $employee->getID() . "<p/>";
-    }
+	private function showEmployee(IAcmePrototype $employee)
+	{
+		echo $employee->getName() . "<br/>";
+		echo $employee->getDept() . ": " . $employee::UNIT . "<br/>";
+		echo $employee->getID() . "<p/>";
+	}
 
-    private function setEmployee(IAcmePrototype $employee,$nm,$dp,$id)
-    {
-        $employee->setName($nm);
-        $employee->setDept($dp);
-        $employee->setID($id);
-    }
+	private function setEmployee(IAcmePrototype $employee,$nm,$dp,$id)
+	{
+		$employee->setName($nm);
+		$employee->setDept($dp);
+		$employee->setID($id);
+	}
 
-		public function simpleFactory()
-		{
-				$factory = new SimpleFactory;
-				$bicycle = $factory->createBicycle();
-				echo $bicycle->driveTo('Austin Texas');
-		}
+	public function simpleFactory()
+	{
+		$factory = new SimpleFactory;
+		$bicycle = $factory->createBicycle();
+		echo $bicycle->driveTo('Austin Texas');
+	}
 }
