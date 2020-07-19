@@ -16,6 +16,7 @@ use App\Factory\Creational\FactoryMethodExample2\{
 	FileLoggerFactory,
 	StdLoggerFactory
 };
+use App\Factory\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
 
 class CreationalController
 {
@@ -49,6 +50,27 @@ class CreationalController
 		$meal->showItems();
 		echo '<pre>meal cost is : ' . $meal->getCost();
 		$meal->forget();
+	}
+	/*
+	* Builder
+	*
+	* @param null
+	* @return null
+	*/
+	public function builder2()
+	{
+		$builder = new DatabaseQueryBuilder('mysql');
+		$query = $builder->select('users', ['user_id', 'user_name'])
+								->where('UserName = :userName', [':userName' => 'bsr.anwar'])
+								->get();
+		echo '<pre>[Mysql Query] : ' . $query;
+
+		
+		$postgresQuery = $builder->setDB('postgres')->select('users', ['user_id', 'user_name'])
+											->where('UserName = :userName', [':userName' => 'khan'])
+											->limit(0, 10)
+											->get();
+		echo '<pre>[Postgres Query] : ' . $postgresQuery;
 	}
 	/*
 	* simple factory or factory method

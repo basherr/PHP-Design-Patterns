@@ -8,6 +8,8 @@ use App\Factory\Creational\BuilderFactory\VegitableBurger;
 use App\Factory\Creational\BuilderFactory\ChickenBurger;
 use App\Factory\Creational\BuilderFactory\Item;
 use App\Factory\Creational\BuilderFactory\Coke;
+// example 2 of builderfactory
+use App\Factory\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
 
 class BuilderFactoryTest extends TestCase {
 	
@@ -66,5 +68,60 @@ class BuilderFactoryTest extends TestCase {
 		$this->assertEquals('20.00', $meal->last()->price());
 		$this->assertEquals('Coke', $meal->last()->name());
 		$this->assertEquals('Bottle', $meal->last()->packing()->pack());
+	}
+	
+	public function testUserCanConnectToAnyDatabase()
+	{
+		$connection = 'mysql';
+		$builder = new DatabaseQueryBuilder($connection);
+		$postgresConnection = 'postgres';
+		$postgresBuilder = new DatabaseQueryBuilder($postgresConnection);
+		
+		$this->assertEquals($connection, $builder->getDB()->getConnection());
+		$this->assertEquals($postgresConnection, $postgresBuilder->getDB()->getConnection());
+	}
+
+	public function testUserCanDisconnectAndReconnectToTheDatabase()
+	{
+		$connection = 'mysql';
+		$builder = new DatabaseQueryBuilder($connection);
+
+		$builder->getDB()->disconnect()->connect();
+		$this->assertEquals($connection, $builder->getDB()->getConnection());
+	}
+
+	public function testUserCanQueryFroMysqlDatabase()
+	{
+		$connection = 'mysql';
+		$builder = new DatabaseQueryBuilder($connection);
+
+		$query = $builder->select('users', ['user_id', 'user_name'])
+								->where('UserName = :userName', [':userName' => 'bsr.anwar'])
+								->get();
+		$this->assertEquals('SELECT user_id,user_name FROM `users` WHERE UserName = bsr.anwar', $query);
+	}
+
+	public function testUserCanQueryFromPostgresDatabase()
+	{
+		$connection = 'postgres';
+		$builder = new DatabaseQueryBuilder($connection);
+
+		$query = $builder->select('users', ['user_id', 'user_name'])
+								->where('UserName = :userName', [':userName' => 'khan'])
+								->limit(0, 10)
+								->get();
+		$this->assertEquals('SELECT user_id,user_name FROM `users` WHERE UserName = khan LIMIT 0,10', $query);
+	}
+
+	public function testUserCanNotUseLimitWithMysqlQuery()
+	{
+		$this->expectException(\BadMethodCallException::class);
+		$connection = 'mysql';
+		$builder = new DatabaseQueryBuilder($connection);
+
+		$builder->select('users', ['user_id', 'user_name'])
+								->where('UserName = :userName', [':userName' => 'khan'])
+								->limit(0, 10)
+								->get();
 	}
 }
