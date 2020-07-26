@@ -11,5 +11,6 @@ return [
     ['GET', '/proto', ['App\Controller\CreationalController', 'prototype']],
     ['GET', '/simple', ['App\Controller\CreationalController', 'simpleFactory']],
     ['GET', '/structural', ['App\Controller\StructuralController', 'adapterPattern']],
+    ['GET', '/structural/adapterExample2', ['App\Controller\StructuralController', 'adapterPatternExample2']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
 ];
