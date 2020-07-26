@@ -1,2 +1,2 @@
 # Design-Patterns
-Implementations are from the https://designpatternsphp.readthedocs.io/en/latest/README.html
+This repo aims to grasp the solid understanding of the programming principles.
