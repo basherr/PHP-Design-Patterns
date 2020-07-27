@@ -6,6 +6,6 @@ class Bicycle
 {
   public function driveTo(string $destination)
   {
-      echo "driving to {$destination}";
+    return "driving to {$destination}";
   }
 }

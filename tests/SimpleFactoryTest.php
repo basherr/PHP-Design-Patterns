@@ -9,7 +9,8 @@ class SimpleFactoryTest extends TestCase {
     public function testCanCreateBicycleAndDriveToTexas()
     {
         $factory = new SimpleFactory();
-        $this->assertSame(Bicycle::class, $factory->createBicycle());
+        
+        $this->assertInstanceOf(Bicycle::class, $factory->createBicycle());
         $this->assertSame('driving to Austin Texas', $factory->createBicycle()->driveTo('Austin Texas'));
     }
 }

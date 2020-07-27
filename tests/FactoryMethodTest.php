@@ -31,12 +31,10 @@ class FactoryMethodTest extends TestCase {
 		$this->assertInstanceOf(Mehran::class, $car2);
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 * @expectedExceptionMessage spaceship is not a valid vehicle
-	 */
+	
 	public function testUnknownType()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		(new ItalianFactory)->create('spaceship', 'white');
 	}
 }
