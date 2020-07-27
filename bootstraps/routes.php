@@ -10,6 +10,7 @@ return [
     ['GET', '/pool', ['App\Controller\CreationalController', 'pool']],
     ['GET', '/proto', ['App\Controller\CreationalController', 'prototype']],
     ['GET', '/simple', ['App\Controller\CreationalController', 'simpleFactory']],
+    ['GET', '/static', ['App\Controller\CreationalController', 'staticFactory']],
     ['GET', '/structural', ['App\Controller\StructuralController', 'adapterPattern']],
     ['GET', '/structural/adapterExample2', ['App\Controller\StructuralController', 'adapterPatternExample2']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
