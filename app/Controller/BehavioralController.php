@@ -9,4 +9,15 @@ class BehavioralController
 
     $app->render();
   }
+
+  public function command()
+  {
+    $queue = \App\Factory\Behavioral\Command\ApiScrapper\Queue::get();
+    if($queue->isEmpty()) {
+      $http = new \App\Factory\Behavioral\Command\ApiScrapper\JsonApiManager;
+      $queue->add(new \App\Factory\Behavioral\Command\ApiScrapper\KlookApiScrapper($http));
+    }
+
+    $queue->work();
+  }
 }
