@@ -26,29 +26,6 @@ class CommandTest extends TestCase {
     $this->assertEquals($defaultCommand->getStatus(), $command->getStatus());
   }
 
-  public function testQueueCanExecuteCommands()
-  {
-    // TODO: following to be fixed
-
-    // $apiManager = $this->getMockBuilder(HttpRequest::class)->getMock();
-
-    // $apiManager->expects($this->once())
-    //             ->method('get')
-    //             ->will($this->returnCallback([$this, 'klookApiResponse']));
-
-    
-    // $queue = new Queue;
-    // $queue->add(new KlookApiScrapper($apiManager));
-    // $queue->work();
-  }
-
-  private function klookApiResponse()
-  {
-    $args = func_get_args();
-    print_r($args);exit;
-    return ['activities' => []];
-  }
-
   public function testQueueCanCompleteCommand()
   {
     $queue = new Queue;
