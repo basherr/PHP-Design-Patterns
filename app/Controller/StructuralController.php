@@ -65,4 +65,15 @@ class StructuralController {
         $facade->deleteItem(0);
         echo "<br/>Item '0' has been successfully deleted<br/>";
     }
+
+    public function bridge()
+    {
+        $renderer = new \App\Factory\Structural\BridgePattern\FlightApi\SabreFlightRenderer;
+        $sabreTicket = new \App\Factory\Structural\BridgePattern\FlightApi\SabreTicket($renderer);
+        echo $sabreTicket->view();
+
+        $renderer = new \App\Factory\Structural\BridgePattern\FlightApi\TravelportFlightRenderer;
+        $travelportTicket = new \App\Factory\Structural\BridgePattern\FlightApi\TravelportTicket($renderer);
+        echo $travelportTicket->view();
+    }
 }
