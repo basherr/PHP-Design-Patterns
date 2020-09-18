@@ -15,6 +15,7 @@ return [
     ['GET', '/structural/adapterExample2', ['App\Controller\StructuralController', 'adapterPatternExample2']],
     ['GET', '/structural/facade', ['App\Controller\StructuralController', 'facade']],
     ['GET', '/structural/bridge', ['App\Controller\StructuralController', 'bridge']],
+    ['GET', '/structural/composite', ['App\Controller\StructuralController', 'composite']],
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],

@@ -76,4 +76,9 @@ class StructuralController {
         $travelportTicket = new \App\Factory\Structural\BridgePattern\FlightApi\TravelportTicket($renderer);
         echo $travelportTicket->view();
     }
+
+    public function composite()
+    {
+        (new \App\Factory\Structural\CompositePattern\Form\Application)->run();
+    }
 }
