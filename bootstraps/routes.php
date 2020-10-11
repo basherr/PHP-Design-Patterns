@@ -17,6 +17,7 @@ return [
     ['GET', '/structural/bridge', ['App\Controller\StructuralController', 'bridge']],
     ['GET', '/structural/composite', ['App\Controller\StructuralController', 'composite']],
     ['GET', '/structural/decorator', ['App\Controller\StructuralController', 'decorator']],
+    ['GET', '/structural/proxy', ['App\Controller\StructuralController', 'proxy']],
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],

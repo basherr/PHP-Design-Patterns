@@ -20,6 +20,7 @@ class CreateTestFileCommand
   */
   public function handle()
   {
+    $this->_className .= 'Test';
     $stub = file_get_contents(__DIR__ . '/../../stubs/Test.stub');
     $content = str_replace('class Test', 'class '. $this->_className, $stub);
     file_put_contents(__DIR__ . '/../../tests/' . $this->_className . '.php', $content);

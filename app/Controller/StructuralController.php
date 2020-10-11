@@ -87,4 +87,9 @@ class StructuralController {
         (new \App\Factory\Structural\DecoratorPattern\ActiveRecord\Application)->run();
     }
     
+    public function proxy()
+    {
+        (new \App\Factory\Structural\ProxyPattern\FileReader\Application)->run();
+    }
+    
 }
