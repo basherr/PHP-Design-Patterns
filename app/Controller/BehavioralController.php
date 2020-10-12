@@ -20,4 +20,10 @@ class BehavioralController
 
     $queue->work();
   }
+
+
+  public function iterator()
+  {
+    (new \App\Factory\Behavioral\Iterator\UserRoles\Application)->run();
+  }
 }

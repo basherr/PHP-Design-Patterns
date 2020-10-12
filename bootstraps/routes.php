@@ -20,5 +20,6 @@ return [
     ['GET', '/structural/proxy', ['App\Controller\StructuralController', 'proxy']],
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
+    ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
 ];
