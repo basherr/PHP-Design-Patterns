@@ -3,7 +3,7 @@ This repo aims to grasp the solid understanding of the design patterns through v
 
 # Important
 
-Refacorization to be done upon completeion of implementation of all patterns.
+Refacorization to be done upon completion of implementation of all patterns.
 
 The structure will be re-arranged in the following manner:
 
