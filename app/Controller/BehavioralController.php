@@ -24,6 +24,7 @@ class BehavioralController
 
   public function iterator()
   {
-    (new \App\Factory\Behavioral\Iterator\UserRoles\Application)->run();
+    // (new \App\Factory\Behavioral\Iterator\UserRoles\Application)->run();
+    (new \App\Factory\Behavioral\Iterator\HotelSuppliers\Application)->run();
   }
 }
