@@ -21,5 +21,6 @@ return [
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
     ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],
+    ['GET', '/behavioral/observer', ['App\Controller\BehavioralController', 'observer']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
 ];
