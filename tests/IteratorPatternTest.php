@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Behavioral\Iterator\HotelSuppliers\{
+use App\Patterns\Behavioral\Iterator\HotelSuppliers\{
   HTOSupplierIterator,
   HTOSupplier,
   DTWSupplierIterator,

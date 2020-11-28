@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\Pool\WorkerPool;
+use App\Patterns\Creational\Pool\WorkerPool;
 
 class PoolTest extends TestCase {
 	

@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\SimpleFactory\Bicycle;
-use App\Factory\Creational\SimpleFactory\SimpleFactory;
+use App\Patterns\Creational\SimpleFactory\Bicycle;
+use App\Patterns\Creational\SimpleFactory\SimpleFactory;
 
 class SimpleFactoryTest extends TestCase {
 

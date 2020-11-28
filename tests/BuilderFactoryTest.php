@@ -1,15 +1,15 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\BuilderFactory\Meal;
-use App\Factory\Creational\BuilderFactory\MealBuilder;
-use App\Factory\Creational\BuilderFactory\Packing;
-use App\Factory\Creational\BuilderFactory\VegitableBurger;
-use App\Factory\Creational\BuilderFactory\ChickenBurger;
-use App\Factory\Creational\BuilderFactory\Item;
-use App\Factory\Creational\BuilderFactory\Coke;
+use App\Patterns\Creational\BuilderFactory\Meal;
+use App\Patterns\Creational\BuilderFactory\MealBuilder;
+use App\Patterns\Creational\BuilderFactory\Packing;
+use App\Patterns\Creational\BuilderFactory\VegitableBurger;
+use App\Patterns\Creational\BuilderFactory\ChickenBurger;
+use App\Patterns\Creational\BuilderFactory\Item;
+use App\Patterns\Creational\BuilderFactory\Coke;
 // example 2 of builderfactory
-use App\Factory\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
+use App\Patterns\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
 
 class BuilderFactoryTest extends TestCase {
 	

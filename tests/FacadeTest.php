@@ -8,12 +8,12 @@ class FacadeTest extends TestCase {
 
   public function setUp(): void
   {
-    $this->facade = new \App\Factory\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
+    $this->facade = new \App\Patterns\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
     $this->facade->createItem($this->defaulItem);
   }
 	
   public function testQuickbooksFacadeCanCreateItem() {
-    $this->facade = new \App\Factory\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
+    $this->facade = new \App\Patterns\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
 
     $this->assertTrue($this->facade->createItem($this->defaulItem));
   }

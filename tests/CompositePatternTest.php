@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-use \App\Factory\Structural\CompositePattern\Form\{
+use \App\Patterns\Structural\CompositePattern\Form\{
   Form,
   InputField,
   Fieldset

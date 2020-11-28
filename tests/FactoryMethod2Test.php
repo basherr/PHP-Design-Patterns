@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\FactoryMethodExample2\{
+use App\Patterns\Creational\FactoryMethodExample2\{
   StdLogger,
   FileLogger,
 	FileLoggerFactory,

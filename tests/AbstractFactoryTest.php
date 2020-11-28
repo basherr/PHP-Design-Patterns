@@ -3,10 +3,10 @@
 // namespace App\Tests;
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\AbstractFactory\HtmlFactory;
-use App\Factory\Creational\AbstractFactory\HtmlText;
-use App\Factory\Creational\AbstractFactory\JsonText;
-use App\Factory\Creational\AbstractFactory\JsonFactory;
+use App\Patterns\Creational\AbstractFactory\HtmlFactory;
+use App\Patterns\Creational\AbstractFactory\HtmlText;
+use App\Patterns\Creational\AbstractFactory\JsonText;
+use App\Patterns\Creational\AbstractFactory\JsonFactory;
 
 class AbstractFactoryTest extends TestCase {
 

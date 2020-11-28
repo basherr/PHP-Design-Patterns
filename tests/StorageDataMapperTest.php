@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Structural\DataMapperPattern\{
+use App\Patterns\Structural\DataMapperPattern\{
   StorageDataMapper,
   User,
   UserMapper

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Structural\BridgePattern\FlightApi\{
+use App\Patterns\Structural\BridgePattern\FlightApi\{
   SabreTicket,
   TravelportTicket,
   SabreFlightRenderer,

@@ -2,21 +2,21 @@
 
 namespace App\Controller;
 
-use App\Factory\Creational\Pool\WorkerPool;
-use App\Factory\Creational\AbstractFactory\JsonFactory;
-use App\Factory\Creational\AbstractFactory\HtmlFactory;
-use App\Factory\Creational\BuilderFactory\MealBuilder;
-use App\Factory\Creational\FactoryMethod\GermanFactory;
-use App\Factory\Creational\Prototype\IAcmePrototype;
-use App\Factory\Creational\Prototype\Marketing;
-use App\Factory\Creational\Prototype\Engineering;
-use App\Factory\Creational\Prototype\Management;
-use App\Factory\Creational\SimpleFactory\SimpleFactory;
-use App\Factory\Creational\FactoryMethodExample2\{
+use App\Patterns\Creational\Pool\WorkerPool;
+use App\Patterns\Creational\AbstractFactory\JsonFactory;
+use App\Patterns\Creational\AbstractFactory\HtmlFactory;
+use App\Patterns\Creational\BuilderFactory\MealBuilder;
+use App\Patterns\Creational\FactoryMethod\GermanFactory;
+use App\Patterns\Creational\Prototype\IAcmePrototype;
+use App\Patterns\Creational\Prototype\Marketing;
+use App\Patterns\Creational\Prototype\Engineering;
+use App\Patterns\Creational\Prototype\Management;
+use App\Patterns\Creational\SimpleFactory\SimpleFactory;
+use App\Patterns\Creational\FactoryMethodExample2\{
 	FileLoggerFactory,
 	StdLoggerFactory
 };
-use App\Factory\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
+use App\Patterns\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
 
 class CreationalController
 {
@@ -170,10 +170,10 @@ class CreationalController
 
 	public function staticFactory()
 	{
-		$supplier = \App\Factory\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(1);
+		$supplier = \App\Patterns\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(1);
 		echo $supplier->request('My booking was cancelled without prior notification') . "<br/><br/>";
 		
-		$supplier = \App\Factory\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(2);
+		$supplier = \App\Patterns\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(2);
 		echo $supplier->request('Please book a ticket for me');
 	}
 }

@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Controller;
-use App\Factory\Structural\AdapterPattern\{
+use App\Patterns\Structural\AdapterPattern\{
     Men,
     KidsAdapter
 };
-use App\Factory\Structural\AdapterPattern\AdapterPatternExample2\{
+use App\Patterns\Structural\AdapterPattern\AdapterPatternExample2\{
     IOSOperatingSystem,
     LinuxOperatingSystemAdapter,
     Operator
@@ -43,7 +43,7 @@ class StructuralController {
 
     public function facade()
     {
-        $facade = new \App\Factory\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
+        $facade = new \App\Patterns\Structural\Facade\Quickbooks\QuickbooksFacade('test123');
         
         $response = $facade->createItem(['name' => 'cement', 'costcode' => 'ABE-222']);
         
@@ -68,28 +68,28 @@ class StructuralController {
 
     public function bridge()
     {
-        $renderer = new \App\Factory\Structural\BridgePattern\FlightApi\SabreFlightRenderer;
-        $sabreTicket = new \App\Factory\Structural\BridgePattern\FlightApi\SabreTicket($renderer);
+        $renderer = new \App\Patterns\Structural\BridgePattern\FlightApi\SabreFlightRenderer;
+        $sabreTicket = new \App\Patterns\Structural\BridgePattern\FlightApi\SabreTicket($renderer);
         echo $sabreTicket->view();
 
-        $renderer = new \App\Factory\Structural\BridgePattern\FlightApi\TravelportFlightRenderer;
-        $travelportTicket = new \App\Factory\Structural\BridgePattern\FlightApi\TravelportTicket($renderer);
+        $renderer = new \App\Patterns\Structural\BridgePattern\FlightApi\TravelportFlightRenderer;
+        $travelportTicket = new \App\Patterns\Structural\BridgePattern\FlightApi\TravelportTicket($renderer);
         echo $travelportTicket->view();
     }
 
     public function composite()
     {
-        (new \App\Factory\Structural\CompositePattern\Form\Application)->run();
+        (new \App\Patterns\Structural\CompositePattern\Form\Application)->run();
     }
     
     public function decorator()
     {
-        (new \App\Factory\Structural\DecoratorPattern\ActiveRecord\Application)->run();
+        (new \App\Patterns\Structural\DecoratorPattern\ActiveRecord\Application)->run();
     }
     
     public function proxy()
     {
-        (new \App\Factory\Structural\ProxyPattern\FileReader\Application)->run();
+        (new \App\Patterns\Structural\ProxyPattern\FileReader\Application)->run();
     }
     
 }

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Behavioral\Observer\NewUserSignedup\{
+use App\Patterns\Behavioral\Observer\NewUserSignedup\{
   User,
   NewUserSignedup,
   ConfirmWhatsapp,
@@ -15,7 +15,7 @@ class ObserverPatternTest extends TestCase {
     $observable = new NewUserSignedup($user);
     $observable->attach(new ConfirmWhatsapp);
 
-    $this->expectOutputString('Sending text to: ' . $user->getPhoneNo());
+    $this->expectOutputString('<pre>Sending text to: ' . $user->getPhoneNo());
     $observable->notify();
   }
 
@@ -25,7 +25,7 @@ class ObserverPatternTest extends TestCase {
     $observable = new NewUserSignedup($user);
     $observable->attach(new SendConfirmationEmail);
 
-    $this->expectOutputString('Sending email to: ' . $user->getEmail());
+    $this->expectOutputString('<pre>Sending email to: ' . $user->getEmail());
     $observable->notify();
   }
 }

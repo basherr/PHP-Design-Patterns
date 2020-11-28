@@ -1,6 +1,6 @@
 <?php
 
-use App\Factory\Structural\RegisteryPattern\Exam\ExamRegistery;
+use App\Patterns\Structural\RegisteryPattern\Exam\ExamRegistery;
 use PHPUnit\Framework\TestCase;
 
 class RegisteryPatternTest extends TestCase {

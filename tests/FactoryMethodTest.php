@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\FactoryMethod\ItalianFactory;
-use App\Factory\Creational\FactoryMethod\FactoryMethod;
-use App\Factory\Creational\FactoryMethod\GermanFactory;
-use App\Factory\Creational\FactoryMethod\Suzki;
-use App\Factory\Creational\FactoryMethod\Alto;
-use App\Factory\Creational\FactoryMethod\Mehran;
-use App\Factory\Creational\FactoryMethod\Ferrari;
+use App\Patterns\Creational\FactoryMethod\ItalianFactory;
+use App\Patterns\Creational\FactoryMethod\FactoryMethod;
+use App\Patterns\Creational\FactoryMethod\GermanFactory;
+use App\Patterns\Creational\FactoryMethod\Suzki;
+use App\Patterns\Creational\FactoryMethod\Alto;
+use App\Patterns\Creational\FactoryMethod\Mehran;
+use App\Patterns\Creational\FactoryMethod\Ferrari;
 
 class FactoryMethodTest extends TestCase {
 	

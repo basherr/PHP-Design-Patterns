@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Structural\AdapterPattern\KidsAdapter;
-use App\Factory\Structural\AdapterPattern\Men;
+use App\Patterns\Structural\AdapterPattern\KidsAdapter;
+use App\Patterns\Structural\AdapterPattern\Men;
 
 class AdapterPatternTest extends TestCase {
 

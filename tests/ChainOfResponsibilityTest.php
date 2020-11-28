@@ -6,7 +6,7 @@ class ChainOfResponsibility extends TestCase
 {
   public function testApplicationCanRenderGuestPage()
   {
-    $app = new \App\Factory\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
+    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
     
     $this->expectOutputString('Guest Dashboard', $app->render());
   }
@@ -14,7 +14,7 @@ class ChainOfResponsibility extends TestCase
   public function testApplicationCanRenderAuthUserPage()
   {
     $_GET = ['uri' => 'auth', 'user' => 'basheer'];
-    $app = new \App\Factory\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
+    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
     
     $this->expectOutputString('simple auth user page', $app->render());
   }
@@ -22,7 +22,7 @@ class ChainOfResponsibility extends TestCase
   public function testApplicationCanRenderAdminPage()
   {
     $_GET = ['uri' => 'admin', 'user' => 'basheer', 'role' => 'admin'];
-    $app = new \App\Factory\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
+    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
     
     $this->expectOutputString('Admin Dashboard', $app->render());
   }
@@ -31,7 +31,7 @@ class ChainOfResponsibility extends TestCase
   {
     $this->expectException(\Exception::class);
     $_GET = ['uri' => 'admin', 'user' => 'base', 'role' => 'admin'];
-    $app = new \App\Factory\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
+    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
     $app->render();
   }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Factory\Creational\StaticFactory\Suppliers\{
+use App\Patterns\Creational\StaticFactory\Suppliers\{
   FlightSupplierFactory,
   SabreSupplier,
   TravelportSupplier

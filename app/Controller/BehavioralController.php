@@ -5,17 +5,17 @@ class BehavioralController
 {
   public function chainOfResponsibility()
   {
-    $app = new \App\Factory\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
+    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
 
     $app->render();
   }
 
   public function command()
   {
-    $queue = \App\Factory\Behavioral\Command\ApiScrapper\Queue::get();
+    $queue = \App\Patterns\Behavioral\Command\ApiScrapper\Queue::get();
     if($queue->isEmpty()) {
-      $http = new \App\Factory\Behavioral\Command\ApiScrapper\JsonApiManager;
-      $queue->add(new \App\Factory\Behavioral\Command\ApiScrapper\KlookApiScrapper($http));
+      $http = new \App\Patterns\Behavioral\Command\ApiScrapper\JsonApiManager;
+      $queue->add(new \App\Patterns\Behavioral\Command\ApiScrapper\KlookApiScrapper($http));
     }
 
     $queue->work();
@@ -24,11 +24,11 @@ class BehavioralController
 
   public function iterator()
   {
-    (new \App\Factory\Behavioral\Iterator\HotelSuppliers\Application)->run();
+    (new \App\Patterns\Behavioral\Iterator\HotelSuppliers\Application)->run();
   }
 
   public function observer()
   {
-    (new \App\Factory\Behavioral\Observer\NewUserSignedup\Application)->run();
+    (new \App\Patterns\Behavioral\Observer\NewUserSignedup\Application)->run();
   }
 }
