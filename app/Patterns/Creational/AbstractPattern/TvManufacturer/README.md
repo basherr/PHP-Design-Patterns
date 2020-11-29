@@ -1,2 +1,2 @@
- # Abstract Tv Factory Pattern
+ # Abstract Tv Factory
  ![Illustration](./illustration.png)
