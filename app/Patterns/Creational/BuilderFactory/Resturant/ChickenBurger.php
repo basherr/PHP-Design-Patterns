@@ -1,6 +1,6 @@
-<?php namespace App\Patterns\Creational\BuilderFactory;
+<?php namespace App\Patterns\Creational\BuilderFactory\Resturant;
 
-class VegitableBurger extends Burger {
+class ChickenBurger extends Burger {
 	/*
 	* Price
 	*
@@ -9,16 +9,16 @@ class VegitableBurger extends Burger {
 	*/
 	public function price() : float
 	{
-		return '100.20';
+		return '140.00';
 	}
 	/*
-	* Item name
+	* Item Name
 	*
 	* @param null
 	* @return null
-	*/
+	*/ 
 	public function name() : string
 	{
-		return 'Vegitable Burger';
+		return 'Chicken Burger';
 	}
 }
