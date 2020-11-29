@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Patterns\Creational\AbstractPattern\TvManufacturer\Application;
 use App\Patterns\Creational\Pool\WorkerPool;
-use App\Patterns\Creational\BuilderFactory\MealBuilder;
 use App\Patterns\Creational\FactoryMethod\GermanFactory;
 use App\Patterns\Creational\Prototype\IAcmePrototype;
 use App\Patterns\Creational\Prototype\Marketing;
@@ -15,7 +13,6 @@ use App\Patterns\Creational\FactoryMethodExample2\{
 	FileLoggerFactory,
 	StdLoggerFactory
 };
-use App\Patterns\Creational\BuilderFactory\BuilderFactoryExample2\DatabaseQueryBuilder;
 
 class CreationalController
 {
@@ -27,7 +24,7 @@ class CreationalController
 	*/
 	public function abstractTvFactory()
 	{
-		echo (new Application)->render();
+		(new \App\Patterns\Creational\AbstractPattern\TvManufacturer\Application)->render();
 	}
 	/*
 	* Builder
@@ -35,13 +32,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function builderFactory()
+	public function resturantBuilder()
 	{
-		$builder = new MealBuilder;
-		$meal = $builder->prepareVegitable();
-		$meal->showItems();
-		echo '<pre>meal cost is : ' . $meal->getCost();
-		$meal->forget();
+		(new \App\Patterns\Creational\BuilderFactory\Resturant\Application)->render();
 	}
 	/*
 	* Builder
@@ -49,20 +42,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function builder2()
+	public function databaseBuilder()
 	{
-		$builder = new DatabaseQueryBuilder('mysql');
-		$query = $builder->select('users', ['user_id', 'user_name'])
-								->where('UserName = :userName', [':userName' => 'bsr.anwar'])
-								->get();
-		echo '<pre>[Mysql Query] : ' . $query;
-
-		
-		$postgresQuery = $builder->setDB('postgres')->select('users', ['user_id', 'user_name'])
-											->where('UserName = :userName', [':userName' => 'khan'])
-											->limit(0, 10)
-											->get();
-		echo '<pre>[Postgres Query] : ' . $postgresQuery;
+		(new \App\Patterns\Creational\BuilderFactory\Database\Application)->render();
 	}
 	/*
 	* simple factory or factory method

@@ -3,8 +3,8 @@
 
 return [
     ['GET', '/', ['App\Controller\CreationalController', 'abstractTvFactory'] ],
-    ['GET', '/builder', ['App\Controller\CreationalController', 'builderFactory']],
-    ['GET', '/builder2', ['App\Controller\CreationalController', 'builder2']],
+    ['GET', '/meal-builder', ['App\Controller\CreationalController', 'resturantBuilder']],
+    ['GET', '/database-builder', ['App\Controller\CreationalController', 'databaseBuilder']],
     ['GET', '/factory', ['App\Controller\CreationalController', 'factoryMethod']],
     ['GET', '/factory2', ['App\Controller\CreationalController', 'factoryMethod2']],
     ['GET', '/pool', ['App\Controller\CreationalController', 'pool']],
