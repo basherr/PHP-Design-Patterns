@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\BuilderFactory\BuilderFactoryExample2;
+<?php namespace App\Patterns\Creational\BuilderFactory\Database;
 
 interface SqlQueryBuilder {
   public function select(string $table, array $fields);

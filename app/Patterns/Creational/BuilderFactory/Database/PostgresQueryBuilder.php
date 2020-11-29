@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\BuilderFactory\BuilderFactoryExample2;
+<?php namespace App\Patterns\Creational\BuilderFactory\Database;
 
 class PostgresQueryBuilder extends MysqlQueryBuilder {
   protected $offset = 0;
