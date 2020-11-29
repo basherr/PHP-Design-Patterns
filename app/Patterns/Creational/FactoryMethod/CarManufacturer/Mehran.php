@@ -1,6 +1,6 @@
-<?php namespace App\Patterns\Creational\FactoryMethod;
+<?php namespace App\Patterns\Creational\FactoryMethod\CarManufacturer;
 
-class Alto implements VehicleInterface {
+class Mehran implements VehicleInterface {
 	/**
 	 * string $color
 	 */
@@ -11,7 +11,7 @@ class Alto implements VehicleInterface {
 	* @param null
 	* @return null
 	*/
-	public function __construct($color = 'blue')
+	public function __construct($color = 'black')
 	{
 		$this->setColor($color);
 	}
@@ -26,7 +26,7 @@ class Alto implements VehicleInterface {
 		$this->color = $color;
 	}
 	/*
-	* Get Color
+	* Get color
 	*
 	* @param null
 	* @return null

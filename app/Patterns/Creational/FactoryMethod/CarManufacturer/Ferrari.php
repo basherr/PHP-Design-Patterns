@@ -1,7 +1,6 @@
-<?php namespace App\Patterns\Creational\FactoryMethod;
+<?php namespace App\Patterns\Creational\FactoryMethod\CarManufacturer;
 
-
-class Suzki implements VehicleInterface {
+class Ferrari implements VehicleInterface {
 	/**
 	 * string $color
 	 */
@@ -12,7 +11,7 @@ class Suzki implements VehicleInterface {
 	* @param null
 	* @return null
 	*/
-	public function __construct($color = 'white')
+	public function __construct($color = 'red')
 	{
 		$this->setColor($color);
 	}

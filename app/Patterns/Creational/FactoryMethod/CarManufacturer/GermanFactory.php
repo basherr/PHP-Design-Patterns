@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\FactoryMethod;
+<?php namespace App\Patterns\Creational\FactoryMethod\CarManufacturer;
 
 class GermanFactory extends FactoryMethod {
 	/*
