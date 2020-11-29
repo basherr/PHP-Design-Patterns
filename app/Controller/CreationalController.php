@@ -2,9 +2,8 @@
 
 namespace App\Controller;
 
+use App\Patterns\Creational\AbstractPattern\TvManufacturer\Application;
 use App\Patterns\Creational\Pool\WorkerPool;
-use App\Patterns\Creational\AbstractFactory\JsonFactory;
-use App\Patterns\Creational\AbstractFactory\HtmlFactory;
 use App\Patterns\Creational\BuilderFactory\MealBuilder;
 use App\Patterns\Creational\FactoryMethod\GermanFactory;
 use App\Patterns\Creational\Prototype\IAcmePrototype;
@@ -26,16 +25,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function abstractFactory()
+	public function abstractTvFactory()
 	{
-		$factory = new HtmlFactory();
-		$p = '<p style="display: inline;">A quick brown fox jumps over the lazy dog</p>';
-		$obj = $factory->createText($p);
-		echo '<b>html string</b>: ' . $obj->render() . '<br/>';
-		$p  = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
-		$factory = new JsonFactory();
-		$obj = $factory->createText($p);
-		echo '<b>json string</b>: ' . $obj->render();
+		echo (new Application)->render();
 	}
 	/*
 	* Builder

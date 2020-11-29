@@ -2,7 +2,7 @@
 
 
 return [
-    ['GET', '/', ['App\Controller\CreationalController', 'abstractFactory'] ],
+    ['GET', '/', ['App\Controller\CreationalController', 'abstractTvFactory'] ],
     ['GET', '/builder', ['App\Controller\CreationalController', 'builderFactory']],
     ['GET', '/builder2', ['App\Controller\CreationalController', 'builder2']],
     ['GET', '/factory', ['App\Controller\CreationalController', 'factoryMethod']],
