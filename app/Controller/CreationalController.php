@@ -3,13 +3,13 @@
 namespace App\Controller;
 
 use App\Patterns\Creational\Pool\WorkerPool;
-use App\Patterns\Creational\FactoryMethod\GermanFactory;
+use App\Patterns\Creational\FactoryMethod\CarManufacturer\GermanFactory;
 use App\Patterns\Creational\Prototype\IAcmePrototype;
 use App\Patterns\Creational\Prototype\Marketing;
 use App\Patterns\Creational\Prototype\Engineering;
 use App\Patterns\Creational\Prototype\Management;
 use App\Patterns\Creational\SimpleFactory\SimpleFactory;
-use App\Patterns\Creational\FactoryMethodExample2\{
+use App\Patterns\Creational\FactoryMethod\Logger\{
 	FileLoggerFactory,
 	StdLoggerFactory
 };
@@ -52,13 +52,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function factoryMethod()
+	public function carManufactureFactoryMethod()
 	{
-		$factory = new GermanFactory;
-		$vehicle = $factory->create('fast', 'blue');
-
-		echo '<pre> class : ' . get_class($vehicle);
-		echo '<pre> color : ' . $vehicle->getColor();
+		(new \App\Patterns\Creational\FactoryMethod\CarManufacturer\Application)->render();
 	}
 	/*
 	* simple factory or factory method
@@ -66,14 +62,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function factoryMethod2()
+	public function loggerFactoryMethod()
 	{
-		$factory = new StdLoggerFactory;
-		$factory->createLogger()->log('Write this message to log');
-
-		$file = __DIR__ . '/factory.txt';
-		(new FileLoggerFactory($file))->createLogger()->log('This text to be written on a file');
-		echo "<br/>". \file_get_contents($file);
+		(new \App\Patterns\Creational\FactoryMethod\Logger\Application)->render();
 	}
 	/*
 	* Pool

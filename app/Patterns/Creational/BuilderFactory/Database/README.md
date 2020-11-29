@@ -1,2 +1,2 @@
- # Meal Builder
+ # Database Builder
  ![Illustration](./illustration.png)
