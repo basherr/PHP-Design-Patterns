@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\FactoryMethodExample2;
+<?php namespace App\Patterns\Creational\FactoryMethod\Logger;
 
 class StdLoggerFactory implements LoggerFactory {
   /**

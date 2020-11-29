@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\FactoryMethodExample2;
+<?php namespace App\Patterns\Creational\FactoryMethod\Logger;
 
 class FileLogger implements Logger {
 
@@ -16,6 +16,6 @@ class FileLogger implements Logger {
   */
   public function log(string $message)
   {
-    \file_put_contents($this->filePath, $message);
+    file_put_contents($this->filePath, $message);
   }
 }
