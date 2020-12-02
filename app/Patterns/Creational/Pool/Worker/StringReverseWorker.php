@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\Pool;
+<?php namespace App\Patterns\Creational\Pool\Worker;
 
 class StringReverseWorker extends WorkerPool {
 	/**

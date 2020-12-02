@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Patterns\Creational\Pool\WorkerPool;
+use App\Patterns\Creational\Pool\Worker\WorkerPool;
 use App\Patterns\Creational\FactoryMethod\CarManufacturer\GermanFactory;
 use App\Patterns\Creational\Prototype\IAcmePrototype;
 use App\Patterns\Creational\Prototype\Marketing;
@@ -67,12 +67,12 @@ class CreationalController
 		(new \App\Patterns\Creational\FactoryMethod\Logger\Application)->render();
 	}
 	/*
-	* Pool
+	* reverse string
 	*
 	* @param null
 	* @return null
 	*/
-	public function pool()
+	public function reverseString()
 	{
 		$pool = new WorkerPool;
 		$worker = $pool->get();

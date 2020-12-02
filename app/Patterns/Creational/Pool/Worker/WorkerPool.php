@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\Pool;
+<?php namespace App\Patterns\Creational\Pool\Worker;
 
 class WorkerPool implements \Countable {
 	/**
@@ -17,6 +17,10 @@ class WorkerPool implements \Countable {
 	*/
 	public function get()
 	{
+		// we assume that we can not afford more than 10 workers at a time
+		if($this->count() > 10) {
+			throw new \Exception('Worker limit reached');
+		}
 		if(count($this->freeWorkers) == 0) {
 			$worker = new StringReverseWorker;
 		} else {

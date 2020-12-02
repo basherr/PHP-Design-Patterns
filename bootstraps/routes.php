@@ -7,7 +7,7 @@ return [
     ['GET', '/database-builder', ['App\Controller\CreationalController', 'databaseBuilder']],
     ['GET', '/car-manufacturer-factory-method', ['App\Controller\CreationalController', 'carManufactureFactoryMethod']],
     ['GET', '/logger-factory-method', ['App\Controller\CreationalController', 'loggerFactoryMethod']],
-    ['GET', '/pool', ['App\Controller\CreationalController', 'pool']],
+    ['GET', '/pool-reverse-string', ['App\Controller\CreationalController', 'reverseString']],
     ['GET', '/proto', ['App\Controller\CreationalController', 'prototype']],
     ['GET', '/simple', ['App\Controller\CreationalController', 'simpleFactory']],
     ['GET', '/static', ['App\Controller\CreationalController', 'staticFactory']],
