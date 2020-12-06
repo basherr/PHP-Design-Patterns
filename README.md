@@ -23,7 +23,7 @@ The life cycle of the application is as follows:
 
 In order to contribute and add real world example for the related pattern, please follow the guidelines:
 - Fork the repository
-- Create a folder inside `app/Patterns/{Type e.g Creational, Behavioral or Structural}/{Pattern Name}/{Example Name}/your code
+- Create a folder inside `app/Patterns/{Type e.g Creational, Behavioral or Structural}/{Pattern Name}/{Example Name}/your code`
 - Please create a READMe.md and include a UML diagram. [Example README.md](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Creational/AbstractPattern/TvManufacturer)
 - Add `unit tests`
 - Create `Application.php` with a method named `render` to describe the usage. [Example Application.php](https://github.com/basherr/PHP-Design-Patterns/blob/master/app/Patterns/Creational/AbstractPattern/TvManufacturer/Application.php)
