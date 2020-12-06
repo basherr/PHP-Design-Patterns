@@ -30,6 +30,8 @@ In order to contribute and add real world example for the related pattern, pleas
 - Please run `composer test` and make sure all tests are passing
 - Create a PR agains the master branch
 
+Please feel free to contribute and create pull requests.
+
 # Console Commands
 The only console command available for creating tests is:
 
