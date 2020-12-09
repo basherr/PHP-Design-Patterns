@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\Prototype;
+<?php namespace App\Patterns\Creational\Prototype\AcmePrototype;
 
 class Management extends IAcmePrototype
 {

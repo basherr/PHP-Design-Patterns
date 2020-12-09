@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\Prototype;
+<?php namespace App\Patterns\Creational\Prototype\AcmePrototype;
 
 class Engineering extends IAcmePrototype
 {
@@ -33,5 +33,5 @@ class Engineering extends IAcmePrototype
         return $this->dept;
     }
 
-    public function __clone(){}
+    public function __clone() {}
 }

@@ -3,16 +3,7 @@
 namespace App\Controller;
 
 use App\Patterns\Creational\Pool\Worker\WorkerPool;
-use App\Patterns\Creational\FactoryMethod\CarManufacturer\GermanFactory;
-use App\Patterns\Creational\Prototype\IAcmePrototype;
-use App\Patterns\Creational\Prototype\Marketing;
-use App\Patterns\Creational\Prototype\Engineering;
-use App\Patterns\Creational\Prototype\Management;
 use App\Patterns\Creational\SimpleFactory\SimpleFactory;
-use App\Patterns\Creational\FactoryMethod\Logger\{
-	FileLoggerFactory,
-	StdLoggerFactory
-};
 
 class CreationalController
 {
@@ -85,45 +76,9 @@ class CreationalController
 	* @param null
 	* @return null
 	*/
-	public function prototype()
+	public function acmePrototype()
 	{
-		$marketing = new Marketing();
-		$management = new Management();
-		$engineering = new Engineering();
-
-		$smith = clone $marketing;
-		$this->setEmployee( $smith, "Tess Smith", 101, "ts101-1234");
-		$this->showEmployee($smith);
-
-		$jacob = clone $marketing;
-		$this->setEmployee( $jacob,"Jacob Jones", 102,"jj101-2234");
-		$this->showEmployee($jacob);
-
-		$ricky = clone $management;
-		$this->setEmployee($ricky,"Ricky Rodriguez", 203,"rr203-5634");
-		$this->showEmployee($ricky);
-
-		$livia = clone $engineering;
-		$this->setEmployee($livia,"Olivia Perez", 302,"op301-1278");
-		$this->showEmployee($livia);
-
-		$jhon = clone $engineering;
-		$this->setEmployee($jhon,"John Jackson", 301, "jj302-1454");
-		$this->showEmployee($jhon);
-	}
-
-	private function showEmployee(IAcmePrototype $employee)
-	{
-		echo $employee->getName() . "<br/>";
-		echo $employee->getDept() . ": " . $employee::UNIT . "<br/>";
-		echo $employee->getID() . "<p/>";
-	}
-
-	private function setEmployee(IAcmePrototype $employee,$nm,$dp,$id)
-	{
-		$employee->setName($nm);
-		$employee->setDept($dp);
-		$employee->setID($id);
+		(new \App\Patterns\Creational\Prototype\AcmePrototype\Application)->render();	
 	}
 
 	public function simpleFactory()
