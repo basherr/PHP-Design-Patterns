@@ -83,10 +83,6 @@ class CreationalController
 
 	public function staticFactory()
 	{
-		$supplier = \App\Patterns\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(1);
-		echo $supplier->request('My booking was cancelled without prior notification') . "<br/><br/>";
-		
-		$supplier = \App\Patterns\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(2);
-		echo $supplier->request('Please book a ticket for me');
+		(new \App\Patterns\Creational\StaticFactory\Suppliers\Application)->render();
 	}
 }
