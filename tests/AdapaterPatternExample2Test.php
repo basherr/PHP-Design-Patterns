@@ -1,10 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Patterns\Structural\AdapterPattern\KidsAdapter;
-use App\Patterns\Structural\AdapterPattern\Men;
+use App\Patterns\Structural\AdapterPattern\Human\KidsAdapter;
+use App\Patterns\Structural\AdapterPattern\Human\Men;
 
-use App\Patterns\Structural\AdapterPattern\AdapterPatternExample2\{
+use App\Patterns\Structural\AdapterPattern\OperatingSystems\{
   IOSOperatingSystem,
   LinuxOperatingSystemAdapter,
   Operator

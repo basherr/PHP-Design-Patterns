@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Controller;
-use App\Patterns\Structural\AdapterPattern\{
+use App\Patterns\Structural\AdapterPattern\Human\{
     Men,
     KidsAdapter
 };
-use App\Patterns\Structural\AdapterPattern\AdapterPatternExample2\{
+use App\Patterns\Structural\AdapterPattern\OperatingSystems\{
     IOSOperatingSystem,
     LinuxOperatingSystemAdapter,
     Operator

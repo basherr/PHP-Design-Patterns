@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Structural\AdapterPattern\AdapterPatternExample2;
+<?php namespace App\Patterns\Structural\AdapterPattern\OperatingSystems;
 
 class Operator {
   private $_os;

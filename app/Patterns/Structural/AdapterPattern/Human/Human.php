@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Patterns\Structural\AdapterPattern;
+namespace App\Patterns\Structural\AdapterPattern\Human;
 
 interface Human {
     public function walk() : string;
