@@ -81,13 +81,6 @@ class CreationalController
 		(new \App\Patterns\Creational\Prototype\AcmePrototype\Application)->render();	
 	}
 
-	public function simpleFactory()
-	{
-		$factory = new SimpleFactory;
-		$bicycle = $factory->createBicycle();
-		echo $bicycle->driveTo('Austin Texas');
-	}
-
 	public function staticFactory()
 	{
 		$supplier = \App\Patterns\Creational\StaticFactory\Suppliers\FlightSupplierFactory::get(1);

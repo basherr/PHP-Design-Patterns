@@ -9,7 +9,6 @@ return [
     ['GET', '/logger-factory-method', ['App\Controller\CreationalController', 'loggerFactoryMethod']],
     ['GET', '/pool-reverse-string', ['App\Controller\CreationalController', 'reverseString']],
     ['GET', '/prototype-acme', ['App\Controller\CreationalController', 'acmePrototype']],
-    ['GET', '/simple', ['App\Controller\CreationalController', 'simpleFactory']],
     ['GET', '/static', ['App\Controller\CreationalController', 'staticFactory']],
     ['GET', '/structural', ['App\Controller\StructuralController', 'adapterPattern']],
     ['GET', '/structural/adapterExample2', ['App\Controller\StructuralController', 'adapterPatternExample2']],
