@@ -39,15 +39,9 @@ class StructuralController {
         echo "<br/>Item '0' has been successfully deleted<br/>";
     }
 
-    public function bridge()
+    public function bridgeFlights()
     {
-        $renderer = new \App\Patterns\Structural\BridgePattern\FlightApi\SabreFlightRenderer;
-        $sabreTicket = new \App\Patterns\Structural\BridgePattern\FlightApi\SabreTicket($renderer);
-        echo $sabreTicket->view();
-
-        $renderer = new \App\Patterns\Structural\BridgePattern\FlightApi\TravelportFlightRenderer;
-        $travelportTicket = new \App\Patterns\Structural\BridgePattern\FlightApi\TravelportTicket($renderer);
-        echo $travelportTicket->view();
+        (new \App\Patterns\Structural\BridgePattern\FlightApi\Application)->render();
     }
 
     public function composite()

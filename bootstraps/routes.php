@@ -15,7 +15,7 @@ return [
     ['GET', '/human-adapter', ['App\Controller\StructuralController', 'humanAdapter']],
     ['GET', '/os-adapter', ['App\Controller\StructuralController', 'osAdapter']],
     ['GET', '/structural/facade', ['App\Controller\StructuralController', 'facade']],
-    ['GET', '/structural/bridge', ['App\Controller\StructuralController', 'bridge']],
+    ['GET', '/bridge-flights', ['App\Controller\StructuralController', 'bridgeFlights']],
     ['GET', '/structural/composite', ['App\Controller\StructuralController', 'composite']],
     ['GET', '/structural/decorator', ['App\Controller\StructuralController', 'decorator']],
     ['GET', '/structural/proxy', ['App\Controller\StructuralController', 'proxy']],
