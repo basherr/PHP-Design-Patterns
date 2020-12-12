@@ -93,7 +93,7 @@ The only console command available for creating tests is:
 
 # Discussions
 
-[Discord](https://discord.gg/G89qtfGR)
+Please create an issue or join [Discord](https://discord.gg/G89qtfGR) for any discussion.
 
 # Licenese
 All of the codebases are **MIT licensed** unless otherwise specified.
