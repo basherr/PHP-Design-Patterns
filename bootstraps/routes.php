@@ -22,7 +22,7 @@ return [
     // behavioral routes
     ['GET', '/chain-http', ['App\Controller\BehavioralController', 'chainHttpRequests']],
     ['GET', '/command-api-scrapper', ['App\Controller\BehavioralController', 'commandApiScrapper']],
-    ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],
+    ['GET', '/hotel-supplier-iterators', ['App\Controller\BehavioralController', 'hotelSupplierIterator']],
     ['GET', '/behavioral/observer', ['App\Controller\BehavioralController', 'observer']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
 ];

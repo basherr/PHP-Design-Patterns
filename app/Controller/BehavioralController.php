@@ -14,7 +14,7 @@ class BehavioralController
   }
 
 
-  public function iterator()
+  public function hotelSupplierIterator()
   {
     (new \App\Patterns\Behavioral\Iterator\HotelSuppliers\Application)->run();
   }
