@@ -23,6 +23,6 @@ return [
     ['GET', '/chain-http', ['App\Controller\BehavioralController', 'chainHttpRequests']],
     ['GET', '/command-api-scrapper', ['App\Controller\BehavioralController', 'commandApiScrapper']],
     ['GET', '/hotel-supplier-iterators', ['App\Controller\BehavioralController', 'hotelSupplierIterator']],
-    ['GET', '/behavioral/observer', ['App\Controller\BehavioralController', 'observer']],
+    ['GET', '/signup-observers', ['App\Controller\BehavioralController', 'signupObservers']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],
 ];

@@ -2,7 +2,7 @@
 
 class Application
 {
-  public function run()
+  public function render()
   {
     $iterator = new \AppendIterator;
     $iterator->append(new DTWSupplierIterator(new DTWSupplier));

@@ -16,11 +16,11 @@ class BehavioralController
 
   public function hotelSupplierIterator()
   {
-    (new \App\Patterns\Behavioral\Iterator\HotelSuppliers\Application)->run();
+    (new \App\Patterns\Behavioral\Iterator\HotelSuppliers\Application)->render();
   }
 
-  public function observer()
+  public function signupObservers()
   {
-    (new \App\Patterns\Behavioral\Observer\NewUserSignedup\Application)->run();
+    (new \App\Patterns\Behavioral\Observer\NewUserSignedup\Application)->render();
   }
 }

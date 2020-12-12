@@ -15,7 +15,7 @@ class ObserverPatternTest extends TestCase {
     $observable = new NewUserSignedup($user);
     $observable->attach(new ConfirmWhatsapp);
 
-    $this->expectOutputString('<pre>Sending text to: ' . $user->getPhoneNo());
+    $this->expectOutputString('<pre>Sending verification code to: ' . $user->getPhoneNo());
     $observable->notify();
   }
 
@@ -25,7 +25,7 @@ class ObserverPatternTest extends TestCase {
     $observable = new NewUserSignedup($user);
     $observable->attach(new SendConfirmationEmail);
 
-    $this->expectOutputString('<pre>Sending email to: ' . $user->getEmail());
+    $this->expectOutputString('<pre>Sending confirmation email to: ' . $user->getEmail());
     $observable->notify();
   }
 }

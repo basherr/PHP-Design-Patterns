@@ -4,6 +4,6 @@ class ConfirmWhatsapp implements \SplObserver
 {
   public function update(\SplSubject $subject)
   {
-    echo '<pre>Sending text to: ' . $subject->getUser()->getPhoneNo();
+    echo '<pre>Sending verification code to: ' . $subject->getUser()->getPhoneNo();
   }
 }
