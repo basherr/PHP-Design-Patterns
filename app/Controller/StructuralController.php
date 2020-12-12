@@ -44,7 +44,7 @@ class StructuralController {
         (new \App\Patterns\Structural\BridgePattern\FlightApi\Application)->render();
     }
 
-    public function composite()
+    public function compositeForm()
     {
         (new \App\Patterns\Structural\CompositePattern\Form\Application)->run();
     }
