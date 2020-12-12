@@ -3,11 +3,9 @@
 
 class BehavioralController
 {
-  public function chainOfResponsibility()
+  public function chainHttpRequests()
   {
-    $app = new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application;
-
-    $app->render();
+    (new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application)->render();
   }
 
   public function command()

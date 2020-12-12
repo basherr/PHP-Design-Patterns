@@ -19,7 +19,8 @@ return [
     ['GET', '/composite-form', ['App\Controller\StructuralController', 'compositeForm']],
     ['GET', '/decorator-active-record', ['App\Controller\StructuralController', 'decoratorActiveRecord']],
     ['GET', '/proxy-file-reader', ['App\Controller\StructuralController', 'proxyFileReader']],
-    ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
+    // behavioral routes
+    ['GET', '/chain-http', ['App\Controller\BehavioralController', 'chainHttpRequests']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
     ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],
     ['GET', '/behavioral/observer', ['App\Controller\BehavioralController', 'observer']],
