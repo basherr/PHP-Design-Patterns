@@ -17,7 +17,7 @@ return [
     ['GET', '/structural/facade', ['App\Controller\StructuralController', 'facade']],
     ['GET', '/bridge-flights', ['App\Controller\StructuralController', 'bridgeFlights']],
     ['GET', '/composite-form', ['App\Controller\StructuralController', 'compositeForm']],
-    ['GET', '/structural/decorator', ['App\Controller\StructuralController', 'decorator']],
+    ['GET', '/decorator-active-record', ['App\Controller\StructuralController', 'decoratorActiveRecord']],
     ['GET', '/structural/proxy', ['App\Controller\StructuralController', 'proxy']],
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],

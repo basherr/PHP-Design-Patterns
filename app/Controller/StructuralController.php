@@ -49,7 +49,7 @@ class StructuralController {
         (new \App\Patterns\Structural\CompositePattern\Form\Application)->run();
     }
     
-    public function decorator()
+    public function decoratorActiveRecord()
     {
         (new \App\Patterns\Structural\DecoratorPattern\ActiveRecord\Application)->run();
     }
