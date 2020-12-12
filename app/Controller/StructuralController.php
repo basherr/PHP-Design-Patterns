@@ -1,44 +1,17 @@
 <?php
 
 namespace App\Controller;
-use App\Patterns\Structural\AdapterPattern\Human\{
-    Men,
-    KidsAdapter
-};
-use App\Patterns\Structural\AdapterPattern\OperatingSystems\{
-    IOSOperatingSystem,
-    LinuxOperatingSystemAdapter,
-    Operator
-};
 
 class StructuralController {
 
-    public function adapterPattern()
+    public function humanAdapter()
     {
-        $men =  new Men;
-        echo $men->walk() . '<br/>';
-        echo $men->speak() . '<br/>';
-        $kids =  new KidsAdapter;
-        echo $kids->speak() . '<br/>';
-        echo $kids->walk();
+        (new \App\Patterns\Structural\AdapterPattern\Human\Application)->render();
     }
 
-    public function adapterPatternExample2()
+    public function osAdapter()
     {
-        $iosOS = new IOSOperatingSystem();
-
-        $operator = new Operator($iosOS);
-        $operator->shutdown();
-        echo '[[IOS status after shutdown]]: ' . $operator->getStatus();
-        $operator->start();
-        echo '<br/>[[IOS status after start]]: ' . $operator->getStatus();
-
-        $linuxAdpt = new LinuxOperatingSystemAdapter();
-        $operator = new Operator($linuxAdpt);
-        $operator->shutdown();
-        echo '<br/><br/><br/>[[Linux status after shutdown]]: ' . $operator->getStatus();
-        $operator->start();
-        echo '<br/>[[Linux status after start]]: ' . $operator->getStatus();
+        (new \App\Patterns\Structural\AdapterPattern\OperatingSystems\Application)->render();
     }
 
     public function facade()

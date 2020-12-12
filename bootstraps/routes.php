@@ -2,6 +2,7 @@
 
 
 return [
+    // creational routes
     ['GET', '/', ['App\Controller\CreationalController', 'abstractTvFactory'] ],
     ['GET', '/meal-builder', ['App\Controller\CreationalController', 'resturantBuilder']],
     ['GET', '/database-builder', ['App\Controller\CreationalController', 'databaseBuilder']],
@@ -10,8 +11,9 @@ return [
     ['GET', '/pool-reverse-string', ['App\Controller\CreationalController', 'reverseString']],
     ['GET', '/prototype-acme', ['App\Controller\CreationalController', 'acmePrototype']],
     ['GET', '/static', ['App\Controller\CreationalController', 'staticFactory']],
-    ['GET', '/structural', ['App\Controller\StructuralController', 'adapterPattern']],
-    ['GET', '/structural/adapterExample2', ['App\Controller\StructuralController', 'adapterPatternExample2']],
+    // structural routes
+    ['GET', '/human-adapter', ['App\Controller\StructuralController', 'humanAdapter']],
+    ['GET', '/os-adapter', ['App\Controller\StructuralController', 'osAdapter']],
     ['GET', '/structural/facade', ['App\Controller\StructuralController', 'facade']],
     ['GET', '/structural/bridge', ['App\Controller\StructuralController', 'bridge']],
     ['GET', '/structural/composite', ['App\Controller\StructuralController', 'composite']],
