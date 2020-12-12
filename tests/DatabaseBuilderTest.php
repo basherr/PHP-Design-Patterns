@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Patterns\Creational\BuilderFactory\Database\DatabaseQueryBuilder;
+use App\Patterns\Creational\Builder\Database\DatabaseQueryBuilder;
 
 class DatabaseBuilderTest extends TestCase {
     /**

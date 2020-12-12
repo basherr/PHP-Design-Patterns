@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Patterns\Creational\BuilderFactory\Resturant\Meal;
-use App\Patterns\Creational\BuilderFactory\Resturant\MealBuilder;
-use App\Patterns\Creational\BuilderFactory\Resturant\Packing;
-use App\Patterns\Creational\BuilderFactory\Resturant\VegitableBurger;
-use App\Patterns\Creational\BuilderFactory\Resturant\ChickenBurger;
-use App\Patterns\Creational\BuilderFactory\Resturant\Item;
-use App\Patterns\Creational\BuilderFactory\Resturant\Coke;
+use App\Patterns\Creational\Builder\Resturant\Meal;
+use App\Patterns\Creational\Builder\Resturant\MealBuilder;
+use App\Patterns\Creational\Builder\Resturant\Packing;
+use App\Patterns\Creational\Builder\Resturant\VegitableBurger;
+use App\Patterns\Creational\Builder\Resturant\ChickenBurger;
+use App\Patterns\Creational\Builder\Resturant\Item;
+use App\Patterns\Creational\Builder\Resturant\Coke;
 
 class MealBuilderTest extends TestCase {
 	

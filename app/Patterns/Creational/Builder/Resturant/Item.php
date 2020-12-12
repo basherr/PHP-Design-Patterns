@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\BuilderFactory\Resturant;
+<?php namespace App\Patterns\Creational\Builder\Resturant;
 
 interface Item {
 	public function name(): string;

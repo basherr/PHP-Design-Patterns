@@ -1,6 +1,6 @@
-<?php namespace App\Patterns\Creational\BuilderFactory\Resturant;
+<?php namespace App\Patterns\Creational\Builder\Resturant;
 
-class Coke extends ColdDrink {
+class Pepsi extends ColdDrink {
 	/*
 	* Price
 	*
@@ -9,7 +9,7 @@ class Coke extends ColdDrink {
 	*/
 	public function price() : float
 	{
-		return '20.00';
+		return '30.00';
 	}
 	/*
 	* Name
@@ -19,6 +19,6 @@ class Coke extends ColdDrink {
 	*/
 	public function name() : string
 	{
-		return 'Coke';
+		return 'Pepsi';
 	}
 }

@@ -25,7 +25,7 @@ class CreationalController
 	*/
 	public function resturantBuilder()
 	{
-		(new \App\Patterns\Creational\BuilderFactory\Resturant\Application)->render();
+		(new \App\Patterns\Creational\Builder\Resturant\Application)->render();
 	}
 	/*
 	* Builder
@@ -35,7 +35,7 @@ class CreationalController
 	*/
 	public function databaseBuilder()
 	{
-		(new \App\Patterns\Creational\BuilderFactory\Database\Application)->render();
+		(new \App\Patterns\Creational\Builder\Database\Application)->render();
 	}
 	/*
 	* simple factory or factory method

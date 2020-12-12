@@ -1,4 +1,4 @@
-<?php namespace App\Patterns\Creational\BuilderFactory\Resturant;
+<?php namespace App\Patterns\Creational\Builder\Resturant;
 
 class MealBuilder {
 	/*
