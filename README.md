@@ -81,8 +81,9 @@ In order to contribute and add real world example for the related pattern, pleas
 - Please create a READMe.md and include a UML diagram. [Example README.md](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Creational/AbstractPattern/TvManufacturer)
 - Add `unit tests`
 - Create `Application.php` with a method named `render` to describe the usage. [Example Application.php](https://github.com/basherr/PHP-Design-Patterns/blob/master/app/Patterns/Creational/AbstractPattern/TvManufacturer/Application.php)
+- Add a method in the relevant controller(e.g creational) and add a route in `bootstraps/routes.php`
 - Please run `composer test` and make sure all tests are passing
-- Create a PR agains the master branch
+- Create a PR against the master branch
 
 Please feel free to contribute and create pull requests.
 
