@@ -21,7 +21,7 @@ return [
     ['GET', '/proxy-file-reader', ['App\Controller\StructuralController', 'proxyFileReader']],
     // behavioral routes
     ['GET', '/chain-http', ['App\Controller\BehavioralController', 'chainHttpRequests']],
-    ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
+    ['GET', '/command-api-scrapper', ['App\Controller\BehavioralController', 'commandApiScrapper']],
     ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],
     ['GET', '/behavioral/observer', ['App\Controller\BehavioralController', 'observer']],
     // ['GET', '/{slug}', ['App\Controller\CreationalController', 'show']],

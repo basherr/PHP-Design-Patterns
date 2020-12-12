@@ -8,15 +8,9 @@ class BehavioralController
     (new \App\Patterns\Behavioral\ChainOfResponsibility\HandleHttpRequests\Application)->render();
   }
 
-  public function command()
+  public function commandApiScrapper()
   {
-    $queue = \App\Patterns\Behavioral\Command\ApiScrapper\Queue::get();
-    if($queue->isEmpty()) {
-      $http = new \App\Patterns\Behavioral\Command\ApiScrapper\JsonApiManager;
-      $queue->add(new \App\Patterns\Behavioral\Command\ApiScrapper\KlookApiScrapper($http));
-    }
-
-    $queue->work();
+    (new \App\Patterns\Behavioral\Command\ApiScrapper\Application)->render();
   }
 
 

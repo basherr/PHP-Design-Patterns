@@ -14,6 +14,7 @@ class JsonApiManager implements HttpRequest
 	public function setHeaders(array $headers)
 	{
 		$this->_headers = $headers;
+		return $this;
 	}
 
   protected function getHeaders()

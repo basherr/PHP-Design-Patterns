@@ -22,7 +22,10 @@ class KlookApiScrapper extends AbstractApiScrapper
     ];
     
     try {
-      $response = $this->_http->setHeaders(['X-API-KEY' => $this->_authKey])->get($this->_url, $request);
+      $response = $this->_http->setHeaders([
+        'X-API-KEY' => $this->_authKey
+      ])
+      ->get($this->_url, $request);
       $this->map($response);
       $this->success();
     } catch (\Exception $e) {
