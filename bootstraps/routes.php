@@ -18,7 +18,7 @@ return [
     ['GET', '/bridge-flights', ['App\Controller\StructuralController', 'bridgeFlights']],
     ['GET', '/composite-form', ['App\Controller\StructuralController', 'compositeForm']],
     ['GET', '/decorator-active-record', ['App\Controller\StructuralController', 'decoratorActiveRecord']],
-    ['GET', '/structural/proxy', ['App\Controller\StructuralController', 'proxy']],
+    ['GET', '/proxy-file-reader', ['App\Controller\StructuralController', 'proxyFileReader']],
     ['GET', '/behavioral', ['App\Controller\BehavioralController', 'chainOfResponsibility']],
     ['GET', '/behavioral/command', ['App\Controller\BehavioralController', 'command']],
     ['GET', '/behavioral/iterator', ['App\Controller\BehavioralController', 'iterator']],

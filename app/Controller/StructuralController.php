@@ -34,7 +34,7 @@ class StructuralController {
         (new \App\Patterns\Structural\DecoratorPattern\ActiveRecord\Application)->run();
     }
     
-    public function proxy()
+    public function proxyFileReader()
     {
         (new \App\Patterns\Structural\ProxyPattern\FileReader\Application)->run();
     }
