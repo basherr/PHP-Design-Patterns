@@ -14,7 +14,7 @@ return [
     // structural routes
     ['GET', '/human-adapter', ['App\Controller\StructuralController', 'humanAdapter']],
     ['GET', '/os-adapter', ['App\Controller\StructuralController', 'osAdapter']],
-    ['GET', '/structural/facade', ['App\Controller\StructuralController', 'facade']],
+    ['GET', '/facade-quickbooks', ['App\Controller\StructuralController', 'facadeQuickbooks']],
     ['GET', '/bridge-flights', ['App\Controller\StructuralController', 'bridgeFlights']],
     ['GET', '/composite-form', ['App\Controller\StructuralController', 'compositeForm']],
     ['GET', '/decorator-active-record', ['App\Controller\StructuralController', 'decoratorActiveRecord']],
