@@ -39,4 +39,8 @@ class StructuralController {
         (new \App\Patterns\Structural\ProxyPattern\FileReader\Application)->run();
     }
     
+    public function dependencyInjectionMailer()
+    {
+        (new \App\Patterns\Structural\DependencyInjectionPattern\Mailer\Application)->run();
+    }
 }

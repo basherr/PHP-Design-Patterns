@@ -19,6 +19,7 @@ return [
     ['GET', '/composite-form', ['App\Controller\StructuralController', 'compositeForm']],
     ['GET', '/decorator-active-record', ['App\Controller\StructuralController', 'decoratorActiveRecord']],
     ['GET', '/proxy-file-reader', ['App\Controller\StructuralController', 'proxyFileReader']],
+    ['GET', '/di-mailer', ['App\Controller\StructuralController', 'dependencyInjectionMailer']],
     // behavioral routes
     ['GET', '/chain-http', ['App\Controller\BehavioralController', 'chainHttpRequests']],
     ['GET', '/command-api-scrapper', ['App\Controller\BehavioralController', 'commandApiScrapper']],
