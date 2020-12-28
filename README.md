@@ -46,6 +46,8 @@ If you find some implementation wrong or vague, please create an issue and let u
   - [File Reader Proxy](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Structural/ProxyPattern/FileReader) - *Contributed by owner*
 - [Registery Pattern](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Structural/RegisteryPattern)
   - [Exam Registery](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Structural/RegisteryPattern/Exam) - *Contributed by owner*
+- [Dependency Injection Pattern](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Structural/DependencyInjectionPattern)
+  - [Mailer](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Structural/DependencyInjectionPattern/Mailer) - *Contributed by owner*
 
 # Example Behavior Design Patterns
 - [Chain Of Responsibility Pattern](https://github.com/basherr/PHP-Design-Patterns/tree/master/app/Patterns/Behavioral/ChainOfResponsibility)
